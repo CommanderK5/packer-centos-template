@@ -1,0 +1,68 @@
+{
+  "variables":
+    {
+      "iso_url": "",
+      "iso_checksum": "",
+      "iso_checksum_type": "",
+      "guest_additions_path": "",
+      "redhat_release": "6.7"
+    },
+
+  "builders": [
+    {   
+      "type": "virtualbox-iso",
+      "vm_name": "centos-vm",
+      "boot_wait": "10s",
+      "disk_size": 10000,
+      "guest_os_type": "RedHat_64",
+      "http_directory": "http",
+
+      "iso_url": "{{user `iso_url`}}",
+      "iso_checksum": "{{user `iso_checksum`}}",
+      "iso_checksum_type": "{{user `iso_checksum_type`}}",
+      "guest_additions_path": "{{user `guest_additions_path`}}",
+
+      "boot_command": [
+        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/vagrant.ks<enter><wait>"
+      ],
+      "shutdown_command": "echo 'vagrant'|sudo -S /sbin/halt -h -p",
+      "shutdown_timeout" : "10s",
+      "ssh_username": "vagrant",
+      "ssh_password": "vagrant",
+      "ssh_port": 22,       
+      "hard_drive_interface": "sata",
+      "ssh_wait_timeout": "60m",
+      "output_directory": "builds",      
+      "vboxmanage": [
+        [  "modifyvm",  "{{.Name}}",  "--memory",  "640" ],
+        [  "modifyvm",  "{{.Name}}",  "--cpus",  "2" ]
+      ],
+      "virtualbox_version_file": ".vbox_version"
+    }
+  ], 
+  
+  "post-processors": [
+    {
+      "output": "vagrant-centos-{{user `redhat_release`}}.box",
+      "compression_level": "6",
+      "type": "vagrant"
+    }
+  ],  
+  
+  "provisioners": [
+  {
+    "execute_command": "echo 'vagrant' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
+    "type": "shell",
+    "override": {
+        "virtualbox-iso": {
+          "scripts": [
+            "scripts/base.sh",
+            "scripts/vagrant.sh",
+            "scripts/virtualbox.sh",
+            "scripts/cleanup.sh"
+          ]
+        }
+      }
+    }
+  ]
+}
