@@ -37,7 +37,7 @@ Example var file for CentOS 6.x:
 
 ```json
 {
-  "iso_url": "/Users/lukaszr/Downloads/CentOS-6.7-x86_64-minimal.iso",
+  "iso_url": "CentOS-6.7-x86_64-minimal.iso",
   "iso_checksum": "9d3fec5897be6b3fed4d3dda80b8fa7bb62c616bbfd4bdcd27295ca9b764f498",
   "iso_checksum_type": "sha256",
   "guest_additions_path": "VBoxGuestAdditions.iso",
