@@ -59,7 +59,8 @@
             "scripts/base.sh",
             "scripts/vagrant.sh",
             "scripts/virtualbox.sh",
-            "scripts/cleanup.sh"
+            "scripts/cleanup.sh",
+            "scripts/puppet.sh"
           ]
         }
       }
