@@ -1,6 +1,5 @@
 vars.json
 packer_cache
 *.box
-variables-centos-*.json
 .vagrant
 Vagrantfile
