@@ -38,13 +38,12 @@ Example var file for CentOS 6.x:
 
 ```json
 {
-  "iso_url": "http://mirror.sov.uk.goscomb.net/centos/6.7/isos/x86_64/CentOS-6.7-x86_64-minimal.iso",
-  "iso_checksum": "9d3fec5897be6b3fed4d3dda80b8fa7bb62c616bbfd4bdcd27295ca9b764f498",
+  "iso_url": "http://mirror.sov.uk.goscomb.net/centos/6.8/isos/x86_64/CentOS-6.8-x86_64-minimal.iso",
+  "iso_checksum": "ec49c297d484b9da0787e5944edc38f7c70f21c0f6a60178d8e9a8926d1949f4",
   "iso_checksum_type": "sha256",
   "guest_additions_path": "VBoxGuestAdditions.iso",
-  "redhat_release": "6.7"
+  "redhat_release": "6.8"
 }
-
 ```
 
 Running Packer
