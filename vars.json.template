@@ -3,5 +3,6 @@
   "iso_checksum": "",
   "iso_checksum_type": "",
   "guest_additions_path": "",
-  "redhat_release": ""
+  "redhat_release": "",
+  "disk_size":""
 }
