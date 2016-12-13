@@ -30,7 +30,8 @@ Example var file for CentOS 7.x:
   "iso_checksum": "f90e4d28fa377669b2db16cbcb451fcb9a89d2460e3645993e30e137ac37d284",
   "iso_checksum_type": "sha256",
   "guest_additions_path": "VBoxGuestAdditions.iso",
-  "redhat_release": "7.2"
+  "redhat_release": "7.2",
+  "disk_size": "10000"
 }
 
 ```
@@ -42,7 +43,8 @@ Example var file for CentOS 6.x:
   "iso_checksum": "ec49c297d484b9da0787e5944edc38f7c70f21c0f6a60178d8e9a8926d1949f4",
   "iso_checksum_type": "sha256",
   "guest_additions_path": "VBoxGuestAdditions.iso",
-  "redhat_release": "6.8"
+  "redhat_release": "6.8",
+  "disk_size": "10000"
 }
 ```
 
