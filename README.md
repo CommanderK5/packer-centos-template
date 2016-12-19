@@ -26,12 +26,12 @@ Example var file for CentOS 7.x:
 
 ```json
 {
-  "iso_url": "http://mirror.sov.uk.goscomb.net/centos/7.2.1511/isos/x86_64/CentOS-7-x86_64-Minimal-1511.iso",
-  "iso_checksum": "f90e4d28fa377669b2db16cbcb451fcb9a89d2460e3645993e30e137ac37d284",
+  "iso_url": "http://ftp.ps.pl/pub/Linux/CentOS/7/isos/x86_64/CentOS-7-x86_64-Minimal-1611.iso",
+  "iso_checksum": "27bd866242ee058b7a5754e83d8ee8403e216b93d130d800852a96f41c34d86a",
   "iso_checksum_type": "sha256",
   "guest_additions_path": "VBoxGuestAdditions.iso",
-  "redhat_release": "7.2",
-  "disk_size": "10000"
+  "redhat_release": "7.3",
+  "disk_size": "15000"
 }
 
 ```
@@ -51,4 +51,4 @@ Example var file for CentOS 6.x:
 Running Packer
 --------------
 
-`$ packer build -var-file=vars-example.json vagrant-centos.json` 
+`$ packer build -var-file=vars-example.json vagrant-centos.json`

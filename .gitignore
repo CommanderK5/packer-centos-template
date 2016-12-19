@@ -3,3 +3,4 @@ packer_cache
 *.box
 .vagrant
 Vagrantfile
+VBoxGuestAdditions.iso
