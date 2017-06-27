@@ -39,11 +39,11 @@ Example var file for CentOS 6.x:
 
 ```json
 {
-  "iso_url": "http://mirror.sov.uk.goscomb.net/centos/6.8/isos/x86_64/CentOS-6.8-x86_64-minimal.iso",
-  "iso_checksum": "ec49c297d484b9da0787e5944edc38f7c70f21c0f6a60178d8e9a8926d1949f4",
+  "iso_url": "http://centos.po.opole.pl/6/isos/x86_64/CentOS-6.9-x86_64-minimal.iso",
+  "iso_checksum": "422af57b493b8af49d485885a730c5a1d955f803fac85aa51311c393168b9080",
   "iso_checksum_type": "sha256",
   "guest_additions_path": "VBoxGuestAdditions.iso",
-  "redhat_release": "6.8",
+  "redhat_release": "6.9",
   "disk_size": "10000"
 }
 ```
